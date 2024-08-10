@@ -10,7 +10,7 @@ fn to_uppercase(elements: &[String]) -> Vec<String> {
     elements
         .iter()
         .map(|el| el.to_uppercase())
-        .collect()
+        .collect::<Vec<String>>()
 }
 
 fn main() {
