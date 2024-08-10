@@ -6,9 +6,16 @@ fn short_strings(elements: &mut [String]) {
     elements.iter_mut().for_each(|el| el.truncate(1));
 }
 
-fn main() {
-    let mut colors = vec![String::from("red"), String::from("green"), String::from("blue")];
+fn to_uppercase(elements: &[String]) -> Vec<String> {
+    elements
+        .iter()
+        .map(|el| el.to_uppercase())
+        .collect()
+}
 
+fn main() {
+    let colors = vec![String::from("red"), String::from("green"), String::from("blue")];
+    let mut colors = to_uppercase(&colors);
     short_strings(&mut colors[0..2]);
     print_elements(&colors);
 }
